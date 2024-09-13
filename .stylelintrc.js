@@ -1,11 +1,7 @@
 // @see: https://stylelint.io
 module.exports = {
   root: true,
-  extends: [
-    "stylelint-config-standard",
-    "stylelint-config-recess-order",
-    "stylelint-prettier/recommended",
-  ],
+  extends: ["stylelint-config-standard", "stylelint-config-recess-order", "stylelint-prettier/recommended"],
   overrides: [
     {
       files: ["**/*.html"],
@@ -41,14 +37,7 @@ module.exports = {
     "at-rule-no-unknown": [
       true,
       {
-        ignoreAtRules: [
-          "tailwind",
-          "layer",
-          "apply",
-          "variants",
-          "responsive",
-          "screen",
-        ],
+        ignoreAtRules: ["tailwind", "layer", "apply", "variants", "responsive", "screen"],
       },
     ],
   },
