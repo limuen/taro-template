@@ -62,6 +62,62 @@ export default function Index() {
         { value: "10", text: "10:00-11:00" },
       ],
     },
+    {
+      value: "20230523",
+      text: "5月21日(星期三)",
+      children: [
+        { value: "09", text: "09:00-10:00" },
+        { value: "10", text: "10:00-11:00" },
+      ],
+    },
+    {
+      value: "20230524",
+      text: "5月21日(星期三)",
+      children: [
+        { value: "09", text: "09:00-10:00" },
+        { value: "10", text: "10:00-11:00" },
+      ],
+    },
+    {
+      value: "20230525",
+      text: "5月21日(星期三)",
+      children: [
+        { value: "09", text: "09:00-10:00" },
+        { value: "10", text: "10:00-11:00" },
+      ],
+    },
+    {
+      value: "20230526",
+      text: "5月21日(星期三)",
+      children: [
+        { value: "09", text: "09:00-10:00" },
+        { value: "10", text: "10:00-11:00" },
+      ],
+    },
+    {
+      value: "20230527",
+      text: "5月21日(星期三)",
+      children: [
+        { value: "09", text: "09:00-10:00" },
+        { value: "10", text: "10:00-11:00" },
+      ],
+    },
+    {
+      value: "20230528",
+      text: "5月21日(星期三)",
+      children: [
+        { value: "09", text: "09:00-10:00" },
+        { value: "10", text: "10:00-11:00" },
+      ],
+    },
+    {
+      value: "20230529",
+      text: "5月21日(星期三)",
+      children: [
+        { value: "09", text: "09:00-10:00" },
+        { value: "10", text: "10:00-11:00" },
+      ],
+    },
   ];
   const handleClick = () => {
     setVisible(true);
@@ -75,6 +131,7 @@ export default function Index() {
   };
   const handleTimeChange = (time: TimeType, value: DateType[]) => {
     console.log(time, value);
+    if (value) setVisible(false);
   };
 
   return (
@@ -94,13 +151,12 @@ export default function Index() {
         visible={visible}
         options={options}
         style={{
-          height: "auto",
+          height: "50%",
         }}
         onSelect={handleSelect}
         onDateChange={handleDateChange}
         onTimeChange={handleTimeChange}
       />
-
       <Cell>
         <TrendArrow sync={false} value={1} />
         <TrendArrow sync={false} value={-0.2535} />
