@@ -1,4 +1,6 @@
-module.exports = {
+import type { UserConfigExport } from "@tarojs/cli";
+
+export default {
   env: {
     NODE_ENV: '"development"',
   },
@@ -8,4 +10,4 @@ module.exports = {
   },
   mini: {},
   h5: {},
-};
+} satisfies UserConfigExport;

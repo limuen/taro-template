@@ -5,12 +5,13 @@ import prodConfig from "./prod";
 import path from "path";
 
 // https://taro-docs.jd.com/docs/next/config#defineconfig-辅助函数
-export default defineConfig(async (merge, { command, mode }) => {
-  console.log(command, mode);
+export default defineConfig(async (merge, { mode }) => {
+  const isDev = mode === "development";
+
   const baseConfig = {
     projectName: "taro-template",
     date: "2024-9-13",
-    designWidth(input) {
+    designWidth(input: any) {
       // 配置 NutUI 375 尺寸
       if (input?.file?.replace(/\\+/g, "/").indexOf("@nutui") > -1) {
         return 375;
@@ -47,11 +48,12 @@ export default defineConfig(async (merge, { command, mode }) => {
       prebundle: {
         exclude: ["@nutui/nutui-react-taro"],
         enable: false,
+        force: true,
       },
     },
     // 持久化缓存配置
     cache: {
-      enable: false, // Webpack 持久化缓存配置，建议开启。默认配置请参考：https://docs.taro.zone/docs/config-detail#cache
+      enable: true, // Webpack 持久化缓存配置，建议开启。默认配置请参考：https://docs.taro.zone/docs/config-detail#cache
     },
     mini: {
       miniCssExtractPluginOption: {
@@ -121,7 +123,7 @@ export default defineConfig(async (merge, { command, mode }) => {
       },
     },
   };
-  if (process.env.NODE_ENV === "development") {
+  if (isDev) {
     // 本地开发构建配置（不混淆压缩）
     return merge({}, baseConfig, devConfig);
   }
