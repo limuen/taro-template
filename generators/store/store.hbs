@@ -1,0 +1,9 @@
+import { create } from "zustand";
+
+/**
+ * {{FILE_DESC}}
+ */
+export const {{FILE_NAME}} = create<any>()((set) => ({
+  token: "default-token",
+  setToken: (token) => set({ token }),
+}));
