@@ -1,11 +1,12 @@
 # taro-template
 
-基于 Taro3 + React 的开箱即用多端项目模板。
+基于 Taro3 + React + Zustand 的开箱即用多端项目模板。
 
 ## 技术栈
 
 - Taro
 - React Hooks
+- Zustand
 - TypeScript
 - LESS
 
