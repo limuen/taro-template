@@ -1,9 +1,3 @@
-/*
- * @Description: 首页
- * @Author: limuen
- * @Date: 2024-03-15 10:31:11
- * @FilePath: /qnvip-monorepo-project/apps/miniLocalLiftProject/src/pages/index/index.tsx
- */
 import { useState } from "react";
 import { View, Text } from "@tarojs/components";
 import Taro, { useLoad } from "@tarojs/taro";
