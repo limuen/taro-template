@@ -46,7 +46,7 @@
   "author": "limuen",
   "dependencies": {
     "@babel/runtime": "^7.21.5",
-    "@nutui/nutui-react-taro": "^2.6.19",
+    "@nutui/nutui-react-taro": "^2.6.21",
     "@tarojs/components": "3.6.35",
     "@tarojs/helper": "3.6.35",
     "@tarojs/plugin-framework-react": "3.6.35",
